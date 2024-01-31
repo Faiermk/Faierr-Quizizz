@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score');
+
+        if (score !== null) {
+            scoreDisplay.innerHTML = `Skor Anda: ${score}`;
+        } else {
+            scoreDisplay.innerHTML = 'Skor tidak tersedia.';
+        }
+    });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hasil Quiz</h1>
+        <div id="scoreDisplay" class="tengah">
+               
+        </div>
+        <div class="tengah">
+            <form action="index.html">
+                <button type="Back" value="Back">Back</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
